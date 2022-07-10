@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Atualização de Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form ngForm="fc" (ngSubmit) = "onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)] = "relatorio.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Idade</ion-label>
+      <ion-input type="text" name="idade" [(ngModel)] = "relatorio.idade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data de nacimento</ion-label>
+      <ion-input placeholder="DD/MM/AAAA" name="nacimento" [(ngModel)] = "relatorio.nacimento" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo Pessoa</ion-label>
+      <ion-select type="text" name="pessoa" [(ngModel)] = "relatorio.pessoa">
+        <ion-select-option>Fisíca</ion-select-option>
+        <ion-select-option>Juritica</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">CPF\CNPJ</ion-label>
+      <ion-input ttype="text" name="cpf" [(ngModel)] = "relatorio.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-select type="text" name="estado" [(ngModel)] = "relatorio.estado">
+        <ion-select-option>Acre</ion-select-option>
+        <ion-select-option>Alagoas</ion-select-option>
+        <ion-select-option>Amapá</ion-select-option>
+        <ion-select-option>Amazonas</ion-select-option>
+        <ion-select-option>Bahia</ion-select-option>
+        <ion-select-option>Ceara</ion-select-option>
+        <ion-select-option>Distrito Federal</ion-select-option>
+        <ion-select-option>Espírito Santo</ion-select-option>
+        <ion-select-option>Goiás</ion-select-option>
+        <ion-select-option>Maranhão</ion-select-option>
+        <ion-select-option>Mato Grosso</ion-select-option>
+        <ion-select-option>Mato Grosso do Sul</ion-select-option>
+        <ion-select-option>Minas Gerais</ion-select-option>
+        <ion-select-option>Pará</ion-select-option>
+        <ion-select-option>Paraíba</ion-select-option>
+        <ion-select-option>Paraná</ion-select-option>
+        <ion-select-option>Pernambuco</ion-select-option>
+        <ion-select-option>Piauí</ion-select-option>
+        <ion-select-option>Rio de Janeiro</ion-select-option>
+        <ion-select-option>Rio Grande do Norte</ion-select-option>
+        <ion-select-option>Rio Grande do Sul</ion-select-option>
+        <ion-select-option>Rondônia</ion-select-option>
+        <ion-select-option>Roraima</ion-select-option>
+        <ion-select-option>Santa Catarina</ion-select-option>
+        <ion-select-option>São Paulo</ion-select-option>
+        <ion-select-option>Sergipe</ion-select-option>
+        <ion-select-option>Tocantins</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cidade</ion-label>
+      <ion-input type="text" name="cidade" [(ngModel)] = "relatorio.cidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Bairro</ion-label>
+      <ion-input type="text" name="bairro" [(ngModel)] = "relatorio.bairro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nº</ion-label>
+      <ion-input type="text" name="n" [(ngModel)] = "relatorio.n"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" name="email" [(ngModel)] = "relatorio.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Telefone</ion-label>
+      <ion-input type="text" name="tel" [(ngModel)] = "relatorio.tel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tag</ion-label>
+      <ion-input type="text" name="tag" [(ngModel)] = "relatorio.tag"></ion-input>
+    </ion-item>
+
+
+    <ion-button type="submit" color="primary">Atualizar</ion-button>
+    <ion-button color="danger" routerLink="/cadastro">Voltar</ion-button>
+
+</form>
+
+</ion-content>

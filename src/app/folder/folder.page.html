@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <main class="bg-img">
+    <div class="logo">
+      <h1>Simple Parking</h1>
+    </div>
+    <div class="box-log">
+
+      <div id="container">
+        <label for="usuario" class="label">Usuario</label>
+        <ion-input  type="email"  id="usuario" class="text-login" autocomplete="off" placeholder="Usuario" [(ngModel)]="usuario"></ion-input>
+      </div>
+
+     <div id="container">
+      <label for="password" class="label">Senha</label>
+      <ion-input type="password" id="password" class="text-login" autocomplete="off" placeholder="password" [(ngModel)]="password"></ion-input>
+     </div>
+        
+     <div class="cheqout">
+      <!--  
+        Opção de cadastro de usuário antes de entrar no Home
+
+        <ion-button color="danger" (click)="abrirPagina('/criarusuario')">Cadastro</ion-button>
+                    ou -->
+       <ion-button color="success" (click)="login('/home')">ENTRAR</ion-button>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p>Copytight todos os ditreitos reservados</p>
+    </div>
+  </main>
+  </ion-content>

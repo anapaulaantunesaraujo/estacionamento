@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Veiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form ngForm="fc" (ngSubmit) = "onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Marca</ion-label>
+      <ion-select type="text" name="marca" [(ngModel)] = "veiculo.marca">
+        <ion-select-option>BMW</ion-select-option>
+        <ion-select-option>Audi</ion-select-option>
+        <ion-select-option>CAOA Chery</ion-select-option>
+        <ion-select-option>Chevrolet</ion-select-option>
+        <ion-select-option>Citroën</ion-select-option>
+        <ion-select-option>Dodge</ion-select-option>
+        <ion-select-option>Effa</ion-select-option>
+        <ion-select-option>Ferrari</ion-select-option>
+        <ion-select-option>Fiat</ion-select-option>
+        <ion-select-option>Ford</ion-select-option>
+        <ion-select-option>Honda</ion-select-option>
+        <ion-select-option>Hyundai</ion-select-option>
+        <ion-select-option>Iveco</ion-select-option>
+        <ion-select-option>JAC</ion-select-option>
+        <ion-select-option>Jaguar</ion-select-option>
+        <ion-select-option>Jeep</ion-select-option>
+        <ion-select-option>Kia</ion-select-option>
+        <ion-select-option>Lamborghini</ion-select-option>
+        <ion-select-option>Lexus</ion-select-option>
+        <ion-select-option>Maserati</ion-select-option>
+        <ion-select-option>Lifan</ion-select-option>
+        <ion-select-option>McLaren</ion-select-option>
+        <ion-select-option>Mercedes-AMG</ion-select-option>
+        <ion-select-option>Mercedes-Benz</ion-select-option>
+        <ion-select-option>Mini</ion-select-option>
+        <ion-select-option>Mitsubishi</ion-select-option>
+        <ion-select-option>Nissan</ion-select-option>
+        <ion-select-option>Peugeot</ion-select-option>
+        <ion-select-option>Porsche</ion-select-option>
+        <ion-select-option>Renault</ion-select-option>
+        <ion-select-option>Rolls-Royce</ion-select-option>
+        <ion-select-option>Subaru</ion-select-option>
+        <ion-select-option>Suzuki</ion-select-option>
+        <ion-select-option>MToyota</ion-select-option>
+        <ion-select-option>Volkswagen</ion-select-option>
+        <ion-select-option>Mitsubishi</ion-select-option>
+        <ion-select-option>Volvo</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tipo De Veiculo</ion-label>
+      <ion-select type="text" name="tipo" [(ngModel)] = "veiculo.tipo">
+        <ion-select-option>Carro</ion-select-option>
+        <ion-select-option>Moto</ion-select-option>
+        <ion-select-option>Motoneta</ion-select-option>
+        <ion-select-option>Furgão</ion-select-option>
+        <ion-select-option>Caminhão VUC</ion-select-option>
+        <ion-select-option>Caminhão Truck</ion-select-option>
+        <ion-select-option>Caminhão Carreta</ion-select-option>
+        <ion-select-option>Caminhão Rodotrem</ion-select-option>
+        <ion-select-option>Caminhão Caçamba</ion-select-option>
+        <ion-select-option>Máquinas de pequeno porte</ion-select-option>
+        <ion-select-option>Máquinas de grande porte</ion-select-option>
+        <ion-select-option>Mincro-ônibus</ion-select-option>
+        <ion-select-option>Ônibus</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Modelo De Veiculo</ion-label>
+      <ion-select type="text" name="modelo" [(ngModel)] = "veiculo.modelo">
+        <ion-select-option>Corsa</ion-select-option>
+        <ion-select-option>Celta</ion-select-option>
+        <ion-select-option>Onix</ion-select-option>
+        <ion-select-option>Prisma</ion-select-option>
+        <ion-select-option>Captiva</ion-select-option>
+        <ion-select-option>Classic</ion-select-option>
+        <ion-select-option>Vectra</ion-select-option>
+        <ion-select-option>Cobalt</ion-select-option>
+        <ion-select-option>Agie</ion-select-option>
+        <ion-select-option>Punto</ion-select-option>
+        <ion-select-option>Siena</ion-select-option>
+        <ion-select-option>Uno</ion-select-option>
+        <ion-select-option>Palio</ion-select-option>
+        <ion-select-option>Mobi</ion-select-option>
+        <ion-select-option>Toro</ion-select-option>
+        <ion-select-option>Strada</ion-select-option>
+        <ion-select-option>Palio Weekend</ion-select-option>
+        <ion-select-option>Gol</ion-select-option>
+        <ion-select-option>Fox</ion-select-option>
+        <ion-select-option>UP</ion-select-option>
+        <ion-select-option>Saveiro</ion-select-option>
+        <ion-select-option>RVoyage</ion-select-option>
+        <ion-select-option>Fusca</ion-select-option>
+        <ion-select-option>Santa Catarina</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Placa</ion-label>
+      <ion-input type="text" name="placa" [(ngModel)] = "veiculo.placa"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Renavam</ion-label>
+      <ion-input type="text" name="renavam" [(ngModel)] = "veiculo.renavan"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" color="primary">Salvar</ion-button>
+    <ion-button color="danger" routerLink="/cadastroveiculo">Voltar</ion-button>
+  
+  </form>
+
+
+</ion-content>

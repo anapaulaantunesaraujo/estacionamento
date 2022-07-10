@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Cadastro tags</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let user of relatorio">
+
+    <ion-item >
+      <ion-label>{{user.nome}}: {{user.uid}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

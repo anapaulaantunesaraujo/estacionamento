@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Veiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" routerLink="/veiculos">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+  <ion-item-sliding *ngFor="let user of veiculo">
+
+    <ion-item-options side="start">
+    <ion-item-option routerLink="/veiculos/{{user.uid}}" color="success">atualizar</ion-item-option>
+    </ion-item-options>
+
+    <ion-item routerLink="/veiculos/{{user.uid}}" >
+      <ion-label>{{user.marca}}</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option (click)="remove(user.uid)" color="danger">Apagar</ion-item-option>
+  </ion-item-options>
+
+  </ion-item-sliding>
+
+</ion-content>
+

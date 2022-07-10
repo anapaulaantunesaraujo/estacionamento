@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Em Desenvolvimento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #fc="ngForm" (ngSubmit)="onSubmit()">
+    <div id="container">
+      <input name="primeironome" [(ngModel)] = "criarusuario.primeironome" type=text id="name" class="text-login" autocomplete="off" 
+      placeholder="Primeironome" required>
+  
+      <label for="usuario" class="label">Nome</label>
+    </div>
+    <div id="container">
+      <input name="sobrenome" [(ngModel)] = "criarusuario.sobrenome" type="text" id="sobrenome" class="text-login" autocomplete="off" 
+      placeholder="Sobrenome" required>
+  
+      <label for="sobrenome" class="label">Sobrenome</label>
+    </div>
+
+     <div id="container">
+      <input name="email" [(ngModel)] = "criarusuario.email" type="email" id="email" class="text-login" autocomplete="off" 
+      placeholder="E-mail" required>
+  
+      <label for="email" class="label">E-mail</label>
+     </div>
+
+  
+     <div id="container">
+       <input name="senha" [(ngModel)] = "criarusuario.senha" [minlength]="6" type="password" id="password" class="text-login" autocomplete="off" placeholder="Senha" 
+       #s="ngModel" required>
+  
+       <label for="password" class="label">Senha</label>
+      </div>
+      <p *ngIf="s.invalid && s.dirty">Senha muito curta !</p>
+
+      <div id="container">
+        <input name="confirmar_senha" [(ngModel)] = "criarusuario.confirmar_senha"  type="password" id="confimar_password" class="text-login" autocomplete="off"
+         placeholder="Confirmar Senha" #c="ngModel" required>
+   
+        <label for="confimar_password" class="label">Confirmar Senha</label>
+       </div>
+       <p *ngIf="(c.value !=s.value) && s.dirty">Senhas Diferentes</p>
+  
+    <div class="buttons">
+      <button type="submit" [disabled]="fc.invalid || (c.value !=s.value)">Cadastrar</button>
+    </div>
+
+    <div class="buttons2">
+      <button  id="cancel" type="reset">Cancelar</button>
+    </div>
+
+    <ion-button color="danger" routerLink="/folder/Inbox">Entrar</ion-button>
+
+    </form>
+    
+
+
+</ion-content>

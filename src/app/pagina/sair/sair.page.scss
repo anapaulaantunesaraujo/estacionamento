@@ -1,0 +1,15 @@
+ion-toolbar {
+    --background: var(--ion-item-background, var(--ion-background-color,#D4F809 ));
+  }
+
+  ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color,#383838 ));
+  }
+  .sair{
+    margin-top: 220px;
+    border: none;
+   padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+  }

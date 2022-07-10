@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  }
+  .bg-img{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://vejasp.abril.com.br/wp-content/uploads/2016/11/1605_vila_olimpia.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  .box-log{
+    width: 90vw;
+    height: 40vh;
+    background: transparent;
+    position: absolute;
+    top: 40%;
+    left: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  #container {
+    width: 90vw;
+    position:relative;
+    margin-top:10px;
+    margin-left: 30px;
+  }
+  
+  .label{
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #ffff;
+    user-select: none;
+  }
+  
+  .text-login{
+    padding: 0.8rem;
+    width: 80%;
+    border: 2px 2px 2px 2px solid #453d2c;
+    background: #272530;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    color: #fff;
+  }
+  
+  .label::before{
+    content: '';
+    height: 5px;
+    background: #272530;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .text-login:focus{
+    border: 2px solid #4ecf1b;
+  }
+  
+  .text-login:focus + .label{
+    top: -10px;
+    color: #4ecf1b;
+    font-size: 18px;
+    text-shadow: 1.5px 1px 2px rgba(8,8,8,0.493);
+  }
+  
+  .text-login::placeholder{
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+  
+  .text-login:focus::placeholder{
+    opacity: 1;
+  }
+  
+  .text-login:not(:placeholder-shown) + .label{
+    top: -10px;
+    color: #4ecf1b;
+    font-size: 18;
+  }
+  
+  .cheqout{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    left: 16px;
+    top: 40px;
+    position: relative;
+  }
+  ion-button{
+    width: 30%;
+    font-size: 12px;
+    color: #fff;
+  }
+  a{
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .logo{
+    margin-top: 2em;
+    margin-left: 50px;
+    position: absolute;
+    font-size: 5rem;
+    text-shadow: 0 0 100px;
+    animation: animate 2s infinite linear;
+    -webkit-animation: animate 8s infinite linear;
+  }
+  .logo>h1{
+    font-size: 40px;
+  }
+  
+  @keyframes animate{
+    0%
+    ,100%{
+      color: rgb(252, 164, 0);
+    }
+    25%{
+      color: deeppink;
+    }
+    50%{
+      color: rgb(0, 255, 13);
+    }
+    75%{
+      color: white;
+    }
+  }
+
+.copy{
+  margin-top: 90vh;
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 50px;
+
+}
+ion-button{
+  color: #fff;
+  background: #2f2c45;
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+ion-button:hover{
+  background: #4ecf1b;
+}
+  
+  /* home-end*/
+
+  
+  

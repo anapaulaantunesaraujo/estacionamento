@@ -1,0 +1,21 @@
+ion-toolbar {
+    --background: var(--ion-item-background, var(--ion-background-color,#D4F809 ));
+  }
+
+  ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color,#f8f8f8 ));
+  }
+  p{
+    text-align: justify;
+    margin: 5% 5% 5% 5%;
+  }
+  ion-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5% 2% 5% 2%;
+    border-top: 20%;
+    text-align: justify;
+    color: #199700;
+  }
+  ion-list{
+    background-color: #0e0e0e;
+  }
